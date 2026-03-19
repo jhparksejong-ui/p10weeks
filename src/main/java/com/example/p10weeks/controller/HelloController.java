@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/")
     public String hello() {
-        return "<h1>🚀 Jenkins CI/CD 배포 성공! (v3)</h1>";
+        return "<h1>🚀 Jenkins CI/CD 배포 성공! (v3.0)</h1>";
     }
 }
 
