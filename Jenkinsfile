@@ -16,6 +16,18 @@ pipeline {
             }
         }
 
+        stage('SonarQube Security Analysis') {
+            steps {
+                echo "🔎 자체 구축 SonarQube 정적 코드 보안 분석 시작..."
+                sh '''
+                ./gradlew sonar \
+                  -Dsonar.projectKey=p10weeks-local \
+                  -Dsonar.host.url=http://127.0.0.1:9000 \
+                  -Dsonar.login=sqa_91d4d28874a2aa1893f38bcfabed3483e07cd383
+                '''
+            }
+        }
+
         // Stage 2: 코드 빌드하기
         stage('Build') {
             steps {
