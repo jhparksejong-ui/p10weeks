@@ -1,4 +1,4 @@
-Java
+
 package com.example.p10weeks.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
